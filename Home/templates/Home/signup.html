@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Sobhan fbouna</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'bootstrap/main.js' %}"></script>
+
+</head>
+
+<body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+        <h1>TIS</h1>
+        <p>TIS : technology institue of Sobhan<br />
+            <h2>Security / Deep_learning / WebDevolpment / Math / Sociology </h2>
+            we appreciate of you for joining our institute , we will get in touch with you , thanks for joining .
+            <a href="">Sobhanfbouna</a>.</p>
+    </header>
+
+    {% if submitted %} Thanks :) {% else %}
+    <!-- Signup Form -->
+    <form id="signup-form" method=POST action="#">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{form.as_p}}
+        </div>
+        <input type="submit" value="Send" class="btn btn-secondary" />
+    </form>
+    {% endif %}
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/sobhansanati" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Sobhanfbouna2023.</li>
+            <li>Credits: <a href="">Sobhanfbouna</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
