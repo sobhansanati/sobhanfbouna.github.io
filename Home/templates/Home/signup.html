@@ -16,15 +16,15 @@
     <!-- Header -->
     <header id="header">
         <h1>SIOT</h1>
-        <p>SIOT : Sobhan institue of technology<br />
-            <h2>Security / Deep_learning / WebDevolpment / Math / Sociology </h2>
-            we appreciate of you for joining our institute , we will get in touch with you , thanks for joining .
+        <p>SIOT: technology institue of Sobhan<br />
+            <h2>Hi welcome to contact page </h2>
+            we appreciate of you for joining our institute , we will get in touch with you .
             <a href="">Sobhanfbouna</a>.</p>
     </header>
 
     {% if submitted %} Thanks :) {% else %}
     <!-- Signup Form -->
-    <form id="signup-form" method=POST action="#">
+    <form id="signup-form" method=POST action="{% url 'Home:Home_p' %}">
         {% csrf_token %}
         <div class="mb-3">
             {{form.as_p}}

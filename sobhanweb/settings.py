@@ -29,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Home',
+    'Deep_learning',
+    'Humanity',
+    'Ai',
 ]
 
 MIDDLEWARE = [
@@ -117,12 +120,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #myaccount.google.com/lesssecureapps
 
 # email settings 
-EMAIL_HOST = 'smpt.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = True 
-EMAIL_USE_SSL = True
-
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'contact@sobhanfbouna.com'  #Hosted on namecheap Ex: mail.pure.com
+EMAIL_HOST_USER = 'contact'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587 #This will be different based on your Host, for Namecheap I use this` 
+EMAIL_HOST_PASSWORD = '.#giv75SKm]~' # for the email you created through cPanel. The password for that
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'app-messages' # change this to a proper location

@@ -1,26 +1,161 @@
  {% load static %}
 
 
-<html>
 
-<head>
-    <link rel="stylesheet" href="{% static 'css/c1.css'%}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <title>
-        Homepage
-    </title>
-</head>
 
-<body>
-    <div class="Texts">
-        <strong>Thanks for joining</strong>
-        <p> got your email and we get in touch with you in few hourse </p>
-        <p>Goodbye Dear </p>
-    </div>
-    <div></div>
-    </div>
-</body>
-
-</html>
+ <!DOCTYPE HTML>
+ <html>
+   <head>
+     <title>Sobhanfbouna</title>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+     <link rel="stylesheet" href="{% static 'css/main2.css' %}" />
+     <noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+   </head>
+   <body class="is-preload">
+ 
+     <!-- Wrapper -->
+       <div id="wrapper" class="divided">
+        <!-- One -->
+           <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+             <div class="content">
+               <h1>Sobhanfbouna(sanati)</h1>
+               <p class="major">Hi welcome to sobhanfbouna(sanati) webpage</p>
+                <p>this page has all informations and project and researches that
+                <a href="">sobhanfbouna</a> work on them so far.</p>
+               <ul class="actions stacked">
+                 <li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+               </ul>
+             </div>
+             <div class="image">
+               <img src="{% static 'images/sobhanfbouna.png' %}" alt=""/>
+             </div>
+           </section>
+ 
+         <!-- Two -->
+           <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+             <div class="content">
+               <h2>Deep_learning</h2>
+               <p>this page contain all informations and researches about Deep learing</p>
+               <ul class="actions stacked">
+                 <li><a href="#" class="button">Learn More</a></li>
+               </ul>
+             </div>
+             <div class="image">
+               <img src="https://www.zdnet.com/a/img/resize/28d3f004b94bd200eea41399d2be2fff7505906a/2018/04/13/36c52953-7ab9-4608-a848-71d1d538856e/td-deep-learning.jpg?auto=webp&fit=crop&height=675&width=1200" alt="" />
+             </div>
+           </section>
+ 
+         <!-- Three -->
+           <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+             <div class="content">
+               <h2>Data science</h2>
+               <p>we brought and write for you all things about ( data science ) that you must be known</p>
+               <ul class="actions stacked">
+                 <li><a href="#" class="button">Learn More</a></li>
+               </ul>
+             </div>
+             <div class="image">
+               <img src="https://static.vecteezy.com/system/resources/previews/006/020/770/original/brain-tech-mind-data-logo-free-vector.jpg"alt="" />
+             </div>
+           </section>
+ 
+         <!-- Four -->
+           <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+             <div class="content">
+               <h2>Humanity</h2>
+               <p>find out all of my quote and books about philosophy and sociology and Humanity
+                 stuff </p>
+               <ul class="actions stacked">
+                 <li><a href="#" class="button">Learn More</a></li>
+               </ul>
+             </div>
+             <div class="image">
+               <img src="https://livepkassets.pechakucha.com/slides/681dc3a4-3fad-4858-b8a5-b3115e9e0011/philosophical-quotes.jpg" alt="" />
+             </div>
+           </section>
+ 
+         <!-- Five -->
+           <section class="wrapper style1 align-center">
+             <div class="inner">
+               <h2>Quote of the Day :</h2>
+               <p>there is no beautiful surfaces without terible depth.</p>
+             </div>
+ 
+         <!-- Six -->
+           <section class="wrapper style1 align-center">
+             <div class="inner">
+               <h2>all content you might found on this website </h2>
+               <p>after main topics we focus on other thing that we interested about them </p>
+               <div class="items style1 medium onscroll-fade-in">
+                 <section>
+                  <h3><a>Music</a></h3>
+                   <p>in this section you can find out my favorite playlist in spofity and soundcloud </p>
+                 </section>
+                 <section>
+                   <h3><a>Space</a></h3>
+                   <p>one of the beauty of this world such as stars solar systems and so on .</p>
+                 </section>
+                 <section>
+                  <h3><a>Nature</a></h3>
+                   <p>One of the things in which we live, we use it as a tool and also we love beautiful side of that.</p>
+                 </section>
+               </div>
+             </div>
+           </section>
+ 
+         <!-- Seven -->
+           <section class="wrapper style1 align-center">
+             <div class="inner medium">
+               <h2>Get in touch</h2>
+               <form method="post" action="{% url 'Home:contact_page' %}">
+                {% csrf_token %}
+                 <div class="fields">
+                   <div class="field half">
+                     <label for="name">Name</label>
+                     <input type="text" name="name" id="name" value="" />
+                   </div>
+                   <div class="field half">
+                     <label for="email">Email</label>
+                     <input type="email" name="email" id="email" value="" />
+                   </div>
+                   <div class="field">
+                     <label for="message">Message</label>
+                     <textarea name="message" id="message" rows="6"></textarea>
+                   </div>
+                 </div>
+                 <ul class="actions special">
+                   <li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
+                 </ul>
+               </form>
+ 
+             </div>
+           </section>
+ 
+         <!-- Footer -->
+           <footer class="wrapper style1 align-center">
+             <div class="inner">
+               <ul class="icons">
+                 <li><a href="https://twitter.com/sobhanfbouna"  target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                 <li><a href="https://github.com/sobhansanati" target="_blank" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+                 <li><a href="https://www.linkedin.com/in/sobhan-sanati-48b02b237/" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                 <li><a href="fbounaprograming@gmail.com" target="_blank" class="icon style2 fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+                 <li><a href="https://www.kaggle.com/sobhansanati" target="_blank" class="icon brands style2 fa-kaggle"><span class="label">kaggle</span></a></li>
+               </ul>
+               <p>&copy; 2023 : <a href="https://Sobhanfbouna.com">sobhanfbouna</a>.</p>
+             </div>
+           </footer>
+ 
+       </div>
+ 
+     <!-- Scripts -->
+       <script src="{% static 'js/jquery.min.js' %}"></script>
+       <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+       <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+       <script src="{% static 'js/browser.min.js' %}"></script>
+       <script src="{% static 'js/breakpoints.min.js' %}"></script>
+       <script src="{% static 'js/util.js' %}"></script>
+       <script src="{% static 'js/main.js' %}"></script>
+ 
+   </body>
+ </html>

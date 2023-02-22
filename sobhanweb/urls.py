@@ -19,5 +19,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Home.urls'))
+    path('',include('Home.urls')),
+    path('Humanity/',include('Humanity.urls')),
+    path('Deep learning/',include('Deep_learning.urls')),
+    path('AI/',include('Ai.urls'))
 ]
